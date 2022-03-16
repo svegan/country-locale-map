@@ -1,14 +1,7 @@
 const fuzz = require('fuzzball');
 function CLM() {
     var clm = {};
-    var countries; 
-
-    if(process && process.env && process.env.CLM_MODE == 'INTL') {
-        countries = require('./countries-intl.json');
-    } else {
-        countries = require('./countries.json');
-    }
-
+    var countries = require('./countries.json');
     var countryByAlpha2Code = {};
     var countryByAlpha3Code = {};
     var countryByNumericCode = {};
